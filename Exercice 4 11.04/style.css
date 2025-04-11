@@ -1,0 +1,147 @@
+body:before {
+    content: "À vous de jouer";
+}
+
+
+
+html body {
+    background: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.c-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.c-breadcrumb li+li:before {
+    display: inline-block;
+    margin: 0.25px;
+    content: "→";
+}
+
+.c-breadcrumb li a {
+    color: rgb(107, 123, 174);
+}
+
+.c-products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    column-gap: var(--product-grid-gap);
+    row-gap: var(--product-grid-gap);
+}
+
+.c-product_inner {
+    display: grid;
+    height: 19%;
+    padding: var(--product-padding-inner);
+    justify-content: center;
+    justify-self: center;
+}
+
+.c-product_thumb img {
+    width: var(--product-image-max-width-mob);
+    justify-self: center;
+}
+
+.c-product {
+    background-color: #ffffff;
+    border-radius: var(--border-radius-base);
+}
+
+.c-product_title>a {
+    outline: none;
+    text-decoration: none;
+    color: var(--product-link-color);
+}
+
+.c-product_infos {
+    text-align: center;
+}
+
+.c-product_price {
+    font-weight: var(--product-font-weight);
+}
+
+
+:root {
+    /** Global variables */
+    --border-radius-base: 5px;
+    --border-color: #dadada;
+    --color-green: #6e8943;
+    --transition-duration-short: 0.2s;
+
+    /** Product variables */
+    --product-padding-inner: 20px;
+    --product-max-width: 250px;
+    --product-grid-gap: 10px;
+    --product-inner-gap: 5px;
+    --product-link-color: #000;
+    --product-link-color-hover: #ff0000;
+    --product-font-weight: bold;
+    --product-image-max-width-mobile: 150px;
+
+    /** Sur mobile, on souhaite utiliser ces variables */
+    --product-grid-gap-mob: 20px;
+    --product-image-max-width-mob: 150px;
+}
+
+
+
+@media (max-width: 1900px) {
+    .c-products-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1779px) {
+    .c-products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1279px) {
+    .c-products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .c-products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .c-products-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .c-product_inner {
+        height: 8.5rem;
+        display: flex;
+        justify-content: start;
+        gap: var(--product-grid-gap-mob);
+    }
+
+    .c-product_thumb img {
+        width: var(--product-image-max-width-mobile);
+        padding-bottom: 0.5rem;
+    }
+
+    .c-product_infos {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
