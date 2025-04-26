@@ -1,21 +1,3 @@
-// Le vendeur de tickets de cinéma
-function cinema() {
-    let prenom = prompt("Quel est ton nom et prénom ?");
-    let age = parseInt(prompt("Quel est ton âge ?"));
-    let estEtudiant = prompt("Es-tu étudiant ? (oui/non)").toLowerCase() === "oui";
-    let nombreTickets = parseInt(prompt("Combien de tickets veux-tu acheter ?"));
-    let reduction;
-    const prixBase = 12;
-}
-
-
-
-
-
-
-
-
-
 
 
 // let score = 100;
