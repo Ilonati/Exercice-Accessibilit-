@@ -141,4 +141,4 @@ function defi7() {
 
     console.log(`${test} ${test} ${test.length}`);
 }
-// defi7()
+defi7()

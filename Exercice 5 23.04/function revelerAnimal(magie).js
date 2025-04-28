@@ -18,7 +18,7 @@ choix = Number(choix);
 
 revelerAnimal(choix);
 
-while (isNaN(choix)); // Redemander si ce n'est pas un nombre
+while (isNaN(choix)); // Redemander si ce n'est pas un nombre.
 
 
 // Message final

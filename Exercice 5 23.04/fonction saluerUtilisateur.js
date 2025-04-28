@@ -41,5 +41,5 @@ function calculerMoyenne() {
     const moyenne = calculerMoyenne(1, 2, 3);
     console.log("La moyenne est : " + moyenne);
 }
-calculerMoyenne()
+// calculerMoyenne()
 
