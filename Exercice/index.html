@@ -7,7 +7,7 @@
         <meta name="description" content="Astuce jardinage, plantes, arbres, arbustes, pelouse" />
         <meta name="author" content="" />
 
-        <script src="Objets.js" async></script>
+        <script src=".vscode/functionreponseBonne.js" defer></script>
 
     </head>
 
@@ -16,8 +16,31 @@
         <button onclick="analyserPotion()">Analyser la potion</button>
 
         <div id="liste"></div>
+        <div id="fiche"></div>
+
+        <h1>Quel animal miaule ?</h1>
+        <button onclick="reponseFausse()">Le chien</button>
+        <button onclick="reponseBonne()">Le chat</button>
+        <button onclick="reponseFausse()">La vache</button>
+        <p id="resultat"></p>
+        <button onclick="reset()">Réessayer</button>
 
 
+        <h2>Camp de l'explorateur</h2>
+        <select id="objetSelect">
+            <option value="tente">Tente</option>
+            <option value="feu">Feu de camp</option>
+            <option value="boussole">Boussole</option>
+            <option value="jumelles">Jumelles</option>
+        </select>
+        <button onclick="ajouterObjet()">Ajouter au camp</button>
+
+        <h3>Sac à dos</h3>
+        <div id="sac" style="border: 1px solid gray; padding: 10px; min-height: 50px;"></div>
+
+
+        <h3>Zone de campement</h3>
+        <div id="camp" style="border: 1px solid gray; padding: 10px; min-height: 50px;"></div>
     </body>
 
 </html>
