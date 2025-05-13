@@ -48,3 +48,52 @@ function ajouterObjet() {
     // Ajout de l'objet dans le sac à dos par défaut
     document.getElementById("sac").appendChild(objetDiv);
 }
+
+
+// Défis Express
+
+document.getElementById('texteClique').onclick = function () {
+    this.style.color = 'red';
+};
+
+const btn = document.getElementById('zoomButton');
+
+btn.onmouseenter = function () {
+    this.style.transform = 'scale(1.2)';
+};
+
+btn.onmouseleave = function () {
+    this.style.transform = 'scale(1)';
+};
+let count = 0;
+document.getElementById('clickCounterBtn').onclick = function () {
+    count++;
+    document.getElementById('counter').innerText = count;
+};
+let clickCount = 0;
+const btn = document.getElementById('limitedClickBtn');
+const display = document.getElementById('limitedCounter');
+
+btn.onclick = function () {
+    clickCount++;
+    display.innerText = clickCount;
+    if (clickCount >= 3) {
+        btn.disabled = true;
+    }
+};
+document.getElementById('addParagraph').onclick = function () {
+    const newP = document.createElement('p');
+    newP.innerText = 'Nouveau paragraphe';
+    document.getElementById('container').appendChild(newP);
+};
+document.getElementById('box').onclick = function () {
+    this.remove();
+};
+const titres = document.querySelectorAll('h2');
+const ul = document.getElementById('listeSommaire');
+
+titres.forEach(titre => {
+    const li = document.createElement('li');
+    li.innerText = titre.innerText;
+    ul.appendChild(li);
+});
