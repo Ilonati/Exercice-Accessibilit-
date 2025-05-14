@@ -124,12 +124,7 @@ function preparerSmoothie() {
     let smoothie = [];
 
     for (let counter = 0; counter < 3; counter++) {
-        // let index = indexDepart + counter;
 
-        // if(index >= fruits.length) {
-        //   index = index - fruits.length;
-
-        // }
         let index = (indexDepart + counter) % fruits.length;
         smoothie.push(fruits[index]);
 
